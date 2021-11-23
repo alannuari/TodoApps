@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: rgb(209, 209, 209);
+    border-radius: 10px;
+}
+
+html,
+body {
+    font-family: Raleway;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: #333333;
+    padding: 12px;
+    text-align: center;
+    color: #f8f9fa;
+    width: 80%;
+    margin: 0 auto 16px auto;
+    border-radius: 30px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper-input {
+    margin: 0 auto;
+}
+
+.wrapper-todos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.wrapper-input .container {
+    color: #f8f9fa;
+    width: 600px;
+    border-radius: 8px;
+    margin: 16px;
+    background: #413c69;
+    padding: 16px;
+}
+
+.wrapper-todos .container {
+    border-radius: 8px;
+    margin: 16px 0;
+    background: #4a47a3;
+    padding: 16px;
+    width: 47%;
+}
+
+.wrapper-todos > .container > .container-header {
+    color: #f8f9fa;
+}
+
+.item {
+    border-radius: 16px;
+    margin-top: 16px;
+    padding: 12px 24px 12px 24px;
+    background: white;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+
+.item > .inner {
+    max-width: 75%;
+}
+
+.item > .inner h2 {
+    margin-bottom: unset;
+    overflow-x: auto;
+}
+
+.item > .inner h2::-webkit-scrollbar {
+    height: 7px;
+}
+
+.item > .inner h2::-webkit-scrollbar-thumb {
+    background: rgb(209, 209, 209);
+    border-radius: 7px;
+}
+
+.item > .inner p {
+    margin-top: 5px;
+}
+
+.form {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    height: 300px;
+    border-radius: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 4px;
+    font-size: 18;
+    font-weight: lighter;
+}
+
+.shadow {
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
+}
+
+input[type='text'],
+input[type='date'] {
+    font-family: Raleway;
+    background: #f5f1ff;
+    border: 2px solid #333333;
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.btn-submit {
+    width: fit-content;
+    border: none;
+    font-family: Raleway;
+    border-radius: 16px;
+    padding: 12px 24px;
+    border: 2px solid #333333;
+    color: black;
+    font-size: 24px;
+    margin-top: auto;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: #333333;
+    color: white;
+}
+
+input[type='text'],
+input[type='date'],
+.btn-submit:focus {
+    outline: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.form-title {
+    margin: auto 0;
+}
+
+.check-button {
+    background: url('../assets/check-outline.svg');
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.check-button:hover {
+    background: url('../assets/check-solid.svg');
+}
+
+.trash-button {
+    background: url('../assets/trash-outline.svg');
+    width: 32px;
+    height: 32px;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.trash-button:hover {
+    background: url('../assets/trash-fill.svg');
+}
+
+.undo-button {
+    background: url('../assets/undo-ouline.svg');
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .wrapper-todos {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .wrapper-todos .container {
+        width: 600px;
+        margin: 16px auto;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .wrapper-input {
+        margin: 0;
+    }
+
+    .wrapper-input .container {
+        margin: 16px 0;
+        width: 100%;
+    }
+
+    .wrapper-todos .container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .item > .inner {
+        max-width: 65%;
+    }
+
+    .btn-submit {
+        font-size: 18px;
+    }
+
+    .check-button {
+        width: 24px;
+        height: 24px;
+    }
+
+    .trash-button {
+        width: 24px;
+        height: 24px;
+    }
+
+    .undo-button {
+        width: 24px;
+        height: 24px;
+    }
+
+    input[type='text'],
+    input[type='date'] {
+        padding: 8px;
+        font-size: 18px;
+    }
+}
